@@ -5,7 +5,7 @@ export default function manageTodo(state = {
     case 'ADD_TODO':
       return { todos: state.todos.concat(action.todo.text)};
 
-  default:
-    return state;
+    default:
+      return state;
   }
 }
