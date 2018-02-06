@@ -7,12 +7,17 @@ class CreateTodo extends Component {
       text:""
     }
   }
-  
+
   handleChange(event){
     this.setState({
       text:event.target.value
     });
   };
+
+  handleSubmit(event){
+    event.preventDefault();
+    this.props.state.dispatch({type: 'TODO', text: this.state.text})
+  }
 
   render() {
     return(
