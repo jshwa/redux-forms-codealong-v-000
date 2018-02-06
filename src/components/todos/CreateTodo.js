@@ -16,7 +16,6 @@ class CreateTodo extends Component {
 
   handleSubmit(event){
     event.preventDefault();
-    debugger
     this.props.store.dispatch({type: 'ADD_TODO', todo: this.state})
   }
 
